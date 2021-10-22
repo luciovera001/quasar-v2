@@ -408,7 +408,7 @@
                     <p><b>Smart Buildings</b><br> La tecnología utilizada por QUASAR Smart Life no solamente garantiza el máximo confort, eficiencia y seguridad en viviendas, sino que puede integrarse fácilmente en oficinas, hoteles y otro tipo de edificios
                         terciarios, proporcionando una completa automatización y control. Gracias a la estructura ampliamente escalable del Miniserver, facilita adaptarse a cada tipo de proyecto.</p>
                 </div>
-                <div class="text-center"><button type="submit"><a href="/residencial.html">más información...</a></button></div>
+                <div class="text-center"><button type="submit"><a href="/edificios.html">más información...</a></button></div>
 
             </div>
         </section>
@@ -506,9 +506,9 @@
                                 <input type="text" class="form-control" name="subject" id="subject" placeholder="Título del mensaje (Ej.: Información sobre costo)" required>
                             </div>
                             <div class="form-group mt-3">
-                                <textarea class="form-control" name="message" rows="5" placeholder="Mensaje (Ej.: Quisiera obtener información pertinente al costo para una casa con estos datos: *...*...*...)" required></textarea>
+                                <textarea id="txt_men" class="form-control" name="message" rows="5" placeholder="Mensaje (Ej.: Quisiera obtener información pertinente al costo para una casa con estos datos: *...*...*...)" required></textarea>
                             </div>
-                            <div class="text-center"><button type="submit">Enviar mensaje</button></div>
+                            <div class="text-center"><button id="btn_env" type="submit">Enviar mensaje</button></div>
                         </form>
 
                     </div>
@@ -550,18 +550,20 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
     <!-- Mensaje de envío de correo -->
-
     <script>
-        Swal.fire(
-            'The Internet?',
-            'That thing is still around?',
-            'question'
-        )
+        let btn_enviar = document.querySelector('#btn_env');
+        btn_enviar.onclick = function() {
+            Swal.fire(
+                'Mensaje Enviado',
+                'Se envió correctamente el mensaje',
+                'success'
+            )
+        }
     </script>
-
 </body>
 
 </html>
